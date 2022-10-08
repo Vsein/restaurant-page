@@ -62,7 +62,7 @@ export default function loadAboutPage() {
     const text = document.createElement('div');
     text.classList.add(`${name}-text`);
 
-    const p = document.createElement('div');
+    const p = document.createElement('p');
     p.textContent = texts[i];
     text.appendChild(p);
 

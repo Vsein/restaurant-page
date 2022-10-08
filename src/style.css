@@ -41,7 +41,7 @@ html, body {
   border-bottom: 3px solid #71C639;
 }
 
-.welcome {
+.welcome, .fresh, .discount, .custom {
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -52,111 +52,29 @@ img {
   height: auto;
 }
 
-.welcome-container {
-  background-color: #072206;
+.welcome-container, .fresh-container, .discount-container, .custom-container {
   color: white;
   font-size: 1.4em;
   padding: 1em;
 }
 
-.welcome-text {
-  text-align: center;
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  position: relative;
-  height: 100%;
-  width: 100%;
-  padding: 20px;
-}
-
-.welcome-text:after {
-  display: block;
-  content: "";
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  border-top: 3px solid lightgrey;
-  border-right: 3px solid lightgrey;
-}
-
-.welcome-text:before {
-  display: block;
-  content: "";
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  bottom: -5px;
-  left: -5px;
-  border-bottom: 3px solid lightgrey;
-  border-left: 3px solid lightgrey;
-}
-
-
-.fresh {
-  width: 100vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.welcome-container {
+  background-color: #072206;
 }
 
 .fresh-container {
   background-color: #22061B;
-  color: white;
-  font-size: 1.4em;
-  padding: 1em;
-}
-
-.fresh-text {
-  text-align: center;
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  position: relative;
-  height: 100%;
-  width: 100%;
-  padding: 20px;
-}
-
-.fresh-text:after {
-  display: block;
-  content: "";
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  border-top: 3px solid lightgrey;
-  border-left: 3px solid lightgrey;
-}
-
-.fresh-text:before {
-  display: block;
-  content: "";
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  bottom: -5px;
-  right: -5px;
-  border-bottom: 3px solid lightgrey;
-  border-right: 3px solid lightgrey;
-}
-
-.discount {
-  width: 100vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 }
 
 .discount-container {
   background-color: #201D11;
-  color: white;
-  font-size: 1.4em;
-  padding: 1em;
 }
 
-.discount-text {
+.custom-container {
+  background-color: #35160E;
+}
+
+.welcome-text, .fresh-text, .custom-text, .discount-text {
   text-align: center;
   display: grid;
   justify-items: center;
@@ -166,28 +84,52 @@ img {
   padding: 20px;
 }
 
-.discount-text:after {
+.welcome-text, .fresh-text, .custom-text {
+  align-items: center;
+}
+
+.welcome-text:after, .discount-text:after, .fresh-text:after, .custom-text:after {
   display: block;
   content: "";
   width: 40px;
   height: 40px;
   position: absolute;
+}
+
+.welcome-text:after, .discount-text:after {
   top: -5px;
   right: -5px;
   border-top: 3px solid lightgrey;
   border-right: 3px solid lightgrey;
 }
 
-.discount-text:before {
+.fresh-text:after, .custom-text:after {
+  top: -5px;
+  left: -5px;
+  border-top: 3px solid lightgrey;
+  border-left: 3px solid lightgrey;
+}
+
+.welcome-text:before, .discount-text:before, .fresh-text:before, .custom-text:before {
   display: block;
   content: "";
   width: 40px;
   height: 40px;
   position: absolute;
+}
+
+.welcome-text:before, .discount-text:before {
   bottom: -5px;
   left: -5px;
   border-bottom: 3px solid lightgrey;
   border-left: 3px solid lightgrey;
+}
+
+.fresh-text:before, .custom-text:before {
+  bottom: -5px;
+  right: -5px;
+  border-bottom: 3px solid lightgrey;
+  border-right: 3px solid lightgrey;
 }
 
 .discount-text p {
@@ -215,52 +157,4 @@ img {
   padding: 30px;
   background-color: #14110E;
   color: #EEEEEE;
-}
-
-.custom {
-  width: 100vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.custom-container {
-  background-color: #35160E;
-  color: white;
-  font-size: 1.4em;
-  padding: 1em;
-}
-
-.custom-text {
-  text-align: center;
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  position: relative;
-  height: 100%;
-  width: 100%;
-  padding: 20px;
-}
-
-.custom-text:after {
-  display: block;
-  content: "";
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  border-top: 3px solid lightgrey;
-  border-left: 3px solid lightgrey;
-}
-
-.custom-text:before {
-  display: block;
-  content: "";
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  bottom: -5px;
-  right: -5px;
-  border-bottom: 3px solid lightgrey;
-  border-right: 3px solid lightgrey;
 }
