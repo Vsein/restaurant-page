@@ -2,6 +2,7 @@ import welcome from './assets/smoothie-welcome.jpg'
 import blueberry from './assets/smoothie-blueberry.jpg'
 import discount from './assets/smoothie-discount.jpg'
 import ginger from './assets/smoothie-ginger.jpg'
+import './style.css';
 
 function createNavbar() {
   const navbar = document.createElement('div');
