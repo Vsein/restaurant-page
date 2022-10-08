@@ -1,3 +1,8 @@
+import welcome from './assets/smoothie-welcome.jpg'
+import blueberry from './assets/smoothie-blueberry.jpg'
+import discount from './assets/smoothie-discount.jpg'
+import ginger from './assets/smoothie-ginger.jpg'
+
 function createNavbar() {
   const navbar = document.createElement('div');
   navbar.classList.add('navbar');
@@ -33,7 +38,7 @@ export default function loadAboutPage() {
   content.appendChild(createNavbar());
 
   var sections = ['welcome', 'fresh', 'discount', 'custom'];
-  var smoothies = ['welcome', 'blueberry', 'discount', 'ginger'];
+  var smoothies = [welcome, blueberry, discount, ginger];
   var texts = ["Your healthy lifestyle, as easy as it has ever been!",
     "See how we make your smoothie and be sure that it's made only of fresh ingredients!",
     "A special discount on all our smoothies in the morning! Jump-start your day with momentum!",
@@ -42,13 +47,12 @@ export default function loadAboutPage() {
 
   for (let i = 0; i < sections.length; i++) {
     let name = sections[i];
-    let imgName = smoothies[i];
     const section = document.createElement('div');
     section.classList.add(name);
 
     const img = document.createElement('img');
-    img.src = `smoothie-${imgName}.jpg`;
-    img.alt = `${imgName} smoothie`;
+    img.src = smoothies[i];
+    img.alt = `${name} smoothie`;
     img.classList.add(`${name}-smoothie`);
 
     const container = document.createElement('div');
