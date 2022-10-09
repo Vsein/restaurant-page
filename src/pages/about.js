@@ -1,42 +1,20 @@
-import welcome from './assets/smoothie-welcome.jpg'
-import blueberry from './assets/smoothie-blueberry.jpg'
-import discount from './assets/smoothie-discount.jpg'
-import ginger from './assets/smoothie-ginger.jpg'
-import './style.css';
+import welcome from '../assets/smoothie-welcome.jpg'
+import blueberry from '../assets/smoothie-blueberry.jpg'
+import discount from '../assets/smoothie-discount.jpg'
+import ginger from '../assets/smoothie-ginger.jpg'
+import '../styles/about.css';
+import '../styles/pageLoad.css';
+import { createNavbar, createFooter } from './pageLoad.js'
 
-function createNavbar() {
-  const navbar = document.createElement('div');
-  navbar.classList.add('navbar');
-
-  const title = document.createElement('div');
-  title.classList.add('title');
-
-  const h1 = document.createElement('h1');
-  h1.textContent = 'Smoothiers';
-  title.appendChild(h1);
-  navbar.appendChild(title);
-
-  const navRight = document.createElement('div');
-  navRight.classList.add('nav-right');
-
-  var links = ['About', 'Menu', 'Contact'];
-  for (let i = 0; i < links.length; i++) {
-    const link = document.createElement('div');
-    link.classList.add('link');
-    const p = document.createElement('p');
-    p.textContent = links[i];
-    link.appendChild(p);
-    navRight.appendChild(link);
-  }
-  navbar.appendChild(navRight);
-  return navbar;
-}
 
 export default function loadAboutPage() {
   const content = document.createElement('div');
   content.id = 'content';
 
   content.appendChild(createNavbar());
+
+  const main = document.createElement('div');
+  main.classList.add('main');
 
   var sections = ['welcome', 'fresh', 'discount', 'custom'];
   var smoothies = [welcome, blueberry, discount, ginger];
@@ -83,13 +61,12 @@ export default function loadAboutPage() {
       section.appendChild(img);
     }
 
-    content.appendChild(section);
+    main.appendChild(section);
   }
 
+  content.appendChild(main);
 
-  const footer = document.createElement('div');
-  footer.classList.add('footer');
-  content.appendChild(footer);
+  content.appendChild(createFooter());
 
   document.body.appendChild(content);
 }

@@ -1,3 +1,3 @@
-import loadAboutPage from "./about.js";
+import loadAboutPage from "./pages/about.js";
 
 loadAboutPage();
