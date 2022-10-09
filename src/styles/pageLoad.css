@@ -32,12 +32,17 @@ html, body {
   gap: 30px;
 }
 
-.nav-right .link {
+.nav-right .page {
+  height: 50px;
+  font-size: 1.1em;
   flex: auto;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
   border-bottom: 3px solid transparent;
+  color: inherit;
 }
 
-.nav-right .link:hover {
+.nav-right .page:hover {
   border-bottom: 3px solid #71C639;
 }
 

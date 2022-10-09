@@ -15,14 +15,13 @@ export function createNavbar() {
   const navRight = document.createElement('div');
   navRight.classList.add('nav-right');
 
-  var links = ['About', 'Menu', 'Contact'];
-  for (let i = 0; i < links.length; i++) {
-    const link = document.createElement('div');
-    link.classList.add('link');
-    const p = document.createElement('p');
-    p.textContent = links[i];
-    link.appendChild(p);
-    navRight.appendChild(link);
+  var pages = ['About', 'Menu', 'Contact'];
+  for (let i = 0; i < pages.length; i++) {
+    const page = document.createElement('button');
+    page.classList.add('page');
+    page.id = pages[i].toLowerCase();
+    page.textContent = pages[i];
+    navRight.appendChild(page);
   }
   navbar.appendChild(navRight);
   return navbar;

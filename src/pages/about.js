@@ -6,12 +6,18 @@ import '../styles/about.css';
 import '../styles/pageLoad.css';
 import { createNavbar, createFooter } from './pageLoad.js'
 
-
-export default function loadAboutPage() {
+export function loadInitial() {
   const content = document.createElement('div');
   content.id = 'content';
+  document.body.appendChild(content);
 
   content.appendChild(createNavbar());
+  loadAboutPage();
+  content.appendChild(createFooter());
+}
+
+export default function loadAboutPage() {
+  const content = document.querySelector('#content');
 
   const about = document.createElement('div');
   about.classList.add('about');
@@ -65,8 +71,4 @@ export default function loadAboutPage() {
   }
 
   content.appendChild(about);
-
-  content.appendChild(createFooter());
-
-  document.body.appendChild(content);
 }
