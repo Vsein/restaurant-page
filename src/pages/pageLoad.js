@@ -1,3 +1,5 @@
+import github from '../assets/github.svg'
+
 export function createNavbar() {
   const navbar = document.createElement('div');
   navbar.classList.add('navbar');
@@ -29,5 +31,22 @@ export function createNavbar() {
 export function createFooter() {
   const footer = document.createElement('div');
   footer.classList.add('footer');
+
+  const p = document.createElement('p');
+  p.textContent = "Copyright © 2022 Vsein"
+
+  const link = document.createElement('a');
+  link.href = "https://github.com/vsein";
+
+  const img = document.createElement('img');
+  img.src = github;
+  img.style.height = "38px";
+  img.alt = "Vsein's github";
+
+  link.appendChild(img);
+
+  footer.appendChild(p);
+  footer.appendChild(link);
+
   return footer;
 }

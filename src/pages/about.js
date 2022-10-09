@@ -13,8 +13,8 @@ export default function loadAboutPage() {
 
   content.appendChild(createNavbar());
 
-  const main = document.createElement('div');
-  main.classList.add('main');
+  const about = document.createElement('div');
+  about.classList.add('about');
 
   var sections = ['welcome', 'fresh', 'discount', 'custom'];
   var smoothies = [welcome, blueberry, discount, ginger];
@@ -61,10 +61,10 @@ export default function loadAboutPage() {
       section.appendChild(img);
     }
 
-    main.appendChild(section);
+    about.appendChild(section);
   }
 
-  content.appendChild(main);
+  content.appendChild(about);
 
   content.appendChild(createFooter());
 
