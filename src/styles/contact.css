@@ -1,0 +1,18 @@
+.container {
+  background-color: #688722;
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  padding: 30px;
+}
+
+.contact {
+  display: grid;
+  justify-content: center;
+  align-items: start;
+  padding: 30px;
+  width: min(100vw - 2em, 600px);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #DDE2EC;
+  height: 100%;
+}

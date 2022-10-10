@@ -1,5 +1,6 @@
 import loadAboutPage, { loadInitial } from "./pages/about.js";
 import loadMenuPage from "./pages/menu.js";
+import loadContactPage from "./pages/contact.js";
 import { createFooter } from "./pages/pageLoad.js";
 
 loadInitial();
@@ -25,5 +26,11 @@ aboutButton.addEventListener('click', function(){
 menuButton.addEventListener('click', function(){
   render();
   loadMenuPage();
+  content.appendChild(createFooter());
+});
+
+contactButton.addEventListener('click', function(){
+  render();
+  loadContactPage();
   content.appendChild(createFooter());
 });

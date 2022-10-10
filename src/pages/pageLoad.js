@@ -9,6 +9,7 @@ export function createNavbar() {
 
   const h1 = document.createElement('h1');
   h1.textContent = 'Smoothiers';
+  h1.style.margin = '0';
   title.appendChild(h1);
   navbar.appendChild(title);
 

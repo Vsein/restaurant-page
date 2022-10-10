@@ -9,7 +9,7 @@
 .menu {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-auto-rows: 175px;
+  grid-auto-rows: auto;
   gap: 30px;
   padding: 30px;
   width: min(100vw - 2em, 600px);
